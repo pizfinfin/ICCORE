@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>專利技術解析：電子電路的單項跡的計算與錯誤糾正方法</title>
+    <title>專利技術解析：單項跡運算與錯誤糾正</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,21 +54,21 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
+    <main class="container mx-auto px-6 py-16">
 
         <!-- Introduction Section -->
-        <section class="text-center">
-             <h2 class="text-3xl md:text-5xl font-bold gradient-text-light typing-container" id="typing-headline"></h2><span class="typing-cursor"></span>
-            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-700">
-                探索一項優化晶片設計的革命性專利技術。透過巧妙的數學方法，讓我們的電子設備在資料傳輸與儲存上達到前所未有的效率，直接影響著AI運算、手機續航、上網速度的速度提升並更節省電源。
+        <section>
+             <h2 class="text-3xl md:text-5xl font-bold gradient-text-light typing-container text-center" id="typing-headline"></h2><span class="typing-cursor mx-auto block w-fit"></span>
+            <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                探索一項優化晶片設計的革命性專利技術。它透過巧妙的數學方法，讓我們的電子設備在資料傳輸與儲存上達到前所未有的效率，是提升<strong>AI運算效能</strong>、<strong>手機續航力</strong>、<strong>上網速度</strong>與<strong>資料安全</strong>的關鍵。
             </p>
         </section>
 
-        <hr class="my-12 border-gray-200">
+        <hr class="my-16 border-gray-200">
 
         <!-- Problem vs Solution Section -->
         <section>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
                 <!-- The Problem -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                     <div class="flex items-center">
@@ -78,12 +78,20 @@
                     <p class="mt-4 text-gray-700">
                         傳統錯誤糾正技術中的「跡運算」，其結果常為多項式 (如 $x^2+x+1$)，這需要在硬體晶片上實作多個「加法器」。
                     </p>
-                    <ul class="mt-4 space-y-2 text-gray-600">
-                        <li class="flex items-start"><span class="text-red-500 font-bold mr-2">✗</span><div><strong>硬體複雜：</strong>需要更多電路，設計更困難。</div></li>
-                        <li class="flex items-start"><span class="text-red-500 font-bold mr-2">✗</span><div><strong>速度變慢：</strong>訊號路徑變長，運算延遲增加。</div></li>
-                        <li class="flex items-start"><span class="text-red-500 font-bold mr-2">✗</span><div><strong>功耗增加：</strong>更多元件運作，消耗更多電力。</div></li>
+                    <ul class="mt-4 space-y-3 text-gray-600">
+                        <li class="flex items-start"><span class="text-red-500 font-bold mr-3 mt-1">✗</span><div><strong>硬體複雜：</strong>需要更多電路，設計更困難。</div></li>
+                        <li class="flex items-start"><span class="text-red-500 font-bold mr-3 mt-1">✗</span><div><strong>速度變慢：</strong>訊號路徑變長，運算延遲增加。</div></li>
+                        <li class="flex items-start"><span class="text-red-500 font-bold mr-3 mt-1">✗</span><div><strong>功耗增加：</strong>更多元件運作，消耗更多電力。</div></li>
                     </ul>
                 </div>
+                
+                <!-- Arrow Divider -->
+                <div class="hidden lg:flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </div>
+
 
                 <!-- The Solution -->
                 <div class="bg-teal-50 p-8 rounded-xl shadow-lg border border-teal-200">
@@ -97,77 +105,86 @@
                     <p class="mt-4 text-gray-700">
                         這個巧妙的選擇，讓跡運算的結果永遠是**單項的** (如 $x$)，從而根除了使用加法器的必要。
                     </p>
-                    <ul class="mt-4 space-y-2 text-gray-600">
-                       <li class="flex items-start"><span class="font-bold mr-2 accent-color-light">✓</span><div><strong>硬體簡潔：</strong>無需加法器，電路設計大幅簡化。</div></li>
-                       <li class="flex items-start"><span class="font-bold mr-2 accent-color-light">✓</span><div><strong>速度提升：</strong>運算路徑最短，速度顯著提升。</div></li>
-                       <li class="flex items-start"><span class="font-bold mr-2 accent-color-light">✓</span><div><strong>功耗降低：</strong>元件更少，更省電，續航力更長。</div></li>
+                    <ul class="mt-4 space-y-3 text-gray-600">
+                       <li class="flex items-start"><span class="font-bold mr-3 mt-1 accent-color-light">✓</span><div><strong>硬體簡潔：</strong>無需加法器，電路設計大幅簡化。</div></li>
+                       <li class="flex items-start"><span class="font-bold mr-3 mt-1 accent-color-light">✓</span><div><strong>速度提升：</strong>運算路徑最短，速度顯著提升。</div></li>
+                       <li class="flex items-start"><span class="font-bold mr-3 mt-1 accent-color-light">✓</span><div><strong>功耗降低：</strong>元件更少，更省電，續航力更長。</div></li>
                     </ul>
                 </div>
             </div>
         </section>
         
-        <hr class="my-12 border-gray-200">
+        <hr class="my-16 border-gray-200">
         
         <!-- Importance Section -->
         <section>
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900">對晶片設計與科技產品的重要性</h2>
-            <p class="mt-4 max-w-3xl mx-auto text-lg text-center text-gray-700">
-                這項專利不僅僅是理論上的突破，它在晶片設計、製造到終端科技產品的整個產業鏈中都扮演著至關重要的角色。
-            </p>
-            <div class="mt-10 grid md:grid-cols-3 gap-8 text-center">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">對晶片設計與科技產品的重要性</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                    這項專利不僅僅是理論上的突破，它在晶片設計、製造到終端科技產品的整個產業鏈中都扮演著至關重要的角色。
+                </p>
+            </div>
+            <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
                 <!-- Chip Design -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow border">
                     <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 accent-color-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg></div>
-                    <h3 class="mt-4 text-xl font-bold">晶片設計 (IC Design)</h3>
+                    <h3 class="mt-5 text-xl font-bold">晶片設計 (IC Design)</h3>
                     <p class="mt-2 text-gray-600">更簡潔的電路意味著更短的設計週期、更低的研發成本，並減少潛在的設計錯誤，加速產品上市時間。</p>
                 </div>
                 <!-- Chip Manufacturing -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow border">
                     <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 accent-color-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg></div>
-                    <h3 class="mt-4 text-xl font-bold">晶片製造 (Manufacturing)</h3>
+                    <h3 class="mt-5 text-xl font-bold">晶片製造 (Manufacturing)</h3>
                     <p class="mt-2 text-gray-600">簡化的電路佔用更小的晶片面積，這代表在單一晶圓上可以製造出更多的晶片，直接提高生產良率並降低單位成本。</p>
                 </div>
                 <!-- Tech Products -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow border">
                     <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 accent-color-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg></div>
-                    <h3 class="mt-4 text-xl font-bold">終端科技產品</h3>
+                    <h3 class="mt-5 text-xl font-bold">終端科技產品</h3>
                     <p class="mt-2 text-gray-600">最終，消費者能享受到性能更強、電池續航更久、且價格更具競爭力的電子產品，從智慧型手機到資料中心皆然。</p>
                 </div>
             </div>
         </section>
 
-        <hr class="my-12 border-gray-200">
+        <hr class="my-16 border-gray-200">
 
         <!-- Applications Section -->
         <section>
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900">商業應用與影響力</h2>
-            <div class="mt-8 max-w-4xl mx-auto text-base md:text-lg text-gray-700 space-y-8">
-                <p class="text-center">這項專利的核心是優化「錯誤糾正碼 (ECC)」的硬體解碼晶片設計。它可以應用於所有高度依賴快速、可靠且低功耗的資料傳輸與儲存的商業項目，通常以<strong>晶片（IC）或積體電路（IP Core）</strong>的形式存在。</p>
-                
-                <div class="space-y-6">
-                    <!-- Item 1 -->
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">商業應用與影響力</h2>
+                <p class="mt-4 max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+                    這項專利的核心是優化「錯誤糾正碼 (ECC)」的硬體解碼晶片設計。它可以應用於所有高度依賴快速、可靠且低功耗的資料傳輸與儲存的商業項目，通常以<strong>晶片或積體電路（IC）</strong>的形式存在。
+                </p>
+            </div>
+            
+            <div class="mt-12 max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Item -->
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg hover:border-teal-300"><h3 class="text-xl font-bold accent-color-light">5G/6G 通訊晶片</h3><p class="mt-2 text-gray-800"><strong>應用產品：</strong>智慧型手機、基地台、物聯網(IoT)設備。<br><strong>商業價值：</strong>降低基頻晶片功耗以提升手機續航力，並藉由更快的解碼速度提高資料傳輸速率與穩定性。</p></div>
-                    <!-- Item 2 -->
+                    <!-- Item -->
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg hover:border-teal-300"><h3 class="text-xl font-bold accent-color-light">固態硬碟 (SSD) 控制晶片</h3><p class="mt-2 text-gray-800"><strong>應用產品：</strong>消費級與企業級SSD、資料中心儲存陣列。<br><strong>商業價值：</strong>提升SSD的讀寫速度、可靠性與壽命，並降低控制晶片的功耗與發熱。</p></div>
-                    <!-- Item 3 -->
+                    <!-- Item -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg hover:border-teal-300"><h3 class="text-xl font-bold accent-color-light">AI 運算與資料中心</h3><p class="mt-2 text-gray-800"><strong>應用產品：</strong>GPU、AI晶片。<br><strong>商業價值：</strong>減低AI晶片製作成本，，減少因除錯運算產生的電力與熱量，降低大型資料中心的整體能耗。</p></div>
+                    <!-- Item -->
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg hover:border-teal-300"><h3 class="text-xl font-bold accent-color-light">Wi-Fi 晶片 (例如 Wi-Fi 7)</h3><p class="mt-2 text-gray-800"><strong>應用產品：</strong>無線路由器、筆記型電腦、智慧電視。<br><strong>商業價值：</strong>在複雜的干擾環境下，更快地修正傳輸錯誤，提供更穩定、更高速的無線網路體驗。</p></div>
-                    <!-- Item 4 -->
+                    <!-- Item -->
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg hover:border-teal-300"><h3 class="text-xl font-bold accent-color-light">衛星與深太空通訊設備</h3><p class="mt-2 text-gray-800"><strong>應用產品：</strong>低軌衛星、太空探測器、衛星電話。<br><strong>商業價值：</strong>在能源極其寶貴的極端環境下，以最低功耗提供最強大的糾錯能力。</p></div>
-                     <!-- Item 5 -->
+                     <!-- Item -->
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg hover:border-teal-300"><h3 class="text-xl font-bold accent-color-light">光通訊與海底電纜傳輸設備</h3><p class="mt-2 text-gray-800"><strong>應用產品：</strong>構成網際網路骨幹的光纖網路收發器。<br><strong>商業價值：</strong>確保超大頻寬資料在長距離傳輸中的準確性，並有助於降低設備成本與功耗。</p></div>
                 </div>
+            </div>    
                 
-                <div class="mt-8 bg-teal-50 border-l-4 border-teal-500 text-teal-800 p-4 rounded-r-lg">
-                    <p><strong>總結來說，</strong>這項專利並非直接面向消費者，而是一項底層硬體優化技術。它的商業模式是將此設計方案授權或銷售給IC設計公司（如聯發科、高通），最終使我們的電子產品變得更省電、更快速、更可靠。</p>
-                </div>
+            <div class="max-w-5xl mx-auto mt-8 bg-teal-50 border-l-4 border-teal-500 text-teal-800 p-6 rounded-r-lg">
+                <p><strong>總結來說，</strong>這項專利並非直接面向消費者，而是一項底層硬體優化技術。它的商業模式是將此設計方案授權或銷售給IC設計公司（如聯發科、高通），最終使我們的電子產品變得更省電、更快速、更可靠。</p>
             </div>
+            
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="container mx-auto px-6 py-4 text-center">
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-6 text-center">
             <p>&copy; 2024 專利技術解析。此頁面僅為技術概念展示，非官方文件。</p>
         </div>
     </footer>
